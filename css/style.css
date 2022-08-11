@@ -45,31 +45,85 @@ height: 200px;
 
 /* 3 способ */
 /* div { */
-    /* height: 200px; */
-    /* width: 300px; */
-    /* background-color: red; */
-    /* transition: 1s; */
-    /* background-image: url(../img/image1.jpg); */
-    /* вписать картинку в размер */
-    /* background-size: cover; */
-    /* насыщенность цветов 0% */
-    /* filter: saturate(0); */
+/* height: 200px; */
+/* width: 300px; */
+/* background-color: red; */
+/* transition: 1s; */
+/* background-image: url(../img/image1.jpg); */
+/* вписать картинку в размер */
+/* background-size: cover; */
+/* насыщенность цветов 0% */
+/* filter: saturate(0); */
 /* } */
 /* при наведении курсора меняется */
 /* div:hover { */
-    /* насыщенность цветов 100% */
-    /* filter: saturate(1); */
+/* насыщенность цветов 100% */
+/* filter: saturate(1); */
 
-    /* перенасыщенность цветов 200% */
-    /* filter: saturate(2); */
+/* перенасыщенность цветов 200% */
+/* filter: saturate(2); */
 
-    /* меняется, ВЕСЬ текст НЕ сдвигается */
-        /* transform: scale(1.5); */
+/* меняется, ВЕСЬ текст НЕ сдвигается */
+/* transform: scale(1.5); */
 /* } */
 
-/* 4 способ */
+/* 4 способ, при наведении мышки */
+/* p { */
+    /* время анимации */
+    /* animation-duration: 3s; */
+    /* задается любое имя  */
+    /* animation-name: blablabla; */
+    /* сдвигает текст */
+    /* margin-left: 90%; */
+    /* ширина экрана */
+    /* width: 300%; */
+    /* время замедления анимации */
+    /* transition: 3s; */
+/* } */
 
+/* срабатывание ТОЛЬКО при наведении мышки */
+/* p:hover {
+    margin-left: 0%;
+        width: 100%;
+} */
+
+/* 4 способ, при загрузке страницы */
 p {
-
+    /* время анимации */
+    animation-duration: 3s;
+    /* задается любое имя  */
     animation-name: blablabla;
+    /* делает 3 повторения */
+    animation-iteration-count: 3;
+/* добавляет обратную анимацию */
+    animation-direction: alternate;
+}
+
+@keyframes blablabla {
+/* 0s */
+0% {
+margin-left: 90%;
+    width:300%;
+}
+
+/* в середине делает стоп на экране */
+/* 1.5s */
+30% {
+    font-size: 300%;
+    margin-left: 25%;
+    width: 150%;
+}
+
+70% {
+    font-size: 300%;
+    margin-left: 25%;
+    width: 150%;
+}
+
+
+/* 3s */
+100% {
+    margin-left: 0%;
+    width: 100%;
+}
 }

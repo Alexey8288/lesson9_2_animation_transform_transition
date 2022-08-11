@@ -44,29 +44,32 @@ height: 200px;
 /* } */
 
 /* 3 способ */
-
-div {
-    height: 200px;
-    width: 300px;
-    background-color: red;
-    transition: 1s;
-    background-image: url(../img/image1.jpg);
+/* div { */
+    /* height: 200px; */
+    /* width: 300px; */
+    /* background-color: red; */
+    /* transition: 1s; */
+    /* background-image: url(../img/image1.jpg); */
     /* вписать картинку в размер */
-    background-size: cover;
+    /* background-size: cover; */
     /* насыщенность цветов 0% */
-    filter: saturate(0);
-}
-
-
+    /* filter: saturate(0); */
+/* } */
 /* при наведении курсора меняется */
-div:hover {
+/* div:hover { */
     /* насыщенность цветов 100% */
-    filter: saturate(1);
+    /* filter: saturate(1); */
 
     /* перенасыщенность цветов 200% */
     /* filter: saturate(2); */
 
     /* меняется, ВЕСЬ текст НЕ сдвигается */
-        transform: scale(1.5);
+        /* transform: scale(1.5); */
+/* } */
 
+/* 4 способ */
+
+p {
+
+    animation-name: blablabla;
 }

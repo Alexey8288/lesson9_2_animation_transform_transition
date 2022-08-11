@@ -1,0 +1,44 @@
+/* 1 способ transition*/
+/* div {
+height: 100px;
+width: 100px;
+background-color: red; */
+/* замедляет скорость изменения */
+/* transition: 1s; */
+/* можно задавать только к какому-то свойству */
+/* transition: background-color 1s; */
+/* 1 свойство, 2 время замедления, 3 способ замедления
+(медленно в начале и в конце, время срабатывания) */
+/* transition: width 2s ease-in-out 1s; */
+/* можно не сколько  */
+/* transition: width 2s ease-in-out 1s, background-color 1s ease-in-out 1s; */
+/* } */
+
+/* при наведении курсора меняется, но весь текст сдвигается */
+/* div:hover {
+background-color: green;
+height: 200px;
+    width: 200px; */
+/* } */
+
+
+/* 2 способ */
+
+div {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    transition: 1s;
+}
+
+/* при наведении курсора меняется */
+div:hover {
+    /* сдвигается, гориз. вертик. */
+    /* transform: translate(100px, 100px); */
+
+    /* меняется, ВЕСЬ текст НЕ сдвигается */
+    /* transform: scale(1.5); */
+
+/* проворачивается, на несколько градусов */
+    transform: rotate(-15deg);
+}

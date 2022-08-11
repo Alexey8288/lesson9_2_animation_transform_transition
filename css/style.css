@@ -24,21 +24,49 @@ height: 200px;
 
 /* 2 способ */
 
-div {
+/* div {
     height: 100px;
     width: 100px;
     background-color: red;
     transition: 1s;
+} */
+
+/* при наведении курсора меняется */
+/* div:hover {
+    /* сдвигается, гориз. вертик. */
+/* transform: translate(100px, 100px); */
+
+/* меняется, ВЕСЬ текст НЕ сдвигается */
+/* transform: scale(1.5); */
+
+/* проворачивается, на несколько градусов */
+/* transform: rotate(-15deg); */
+/* } */
+
+/* 3 способ */
+
+div {
+    height: 200px;
+    width: 300px;
+    background-color: red;
+    transition: 1s;
+    background-image: url(../img/image1.jpg);
+    /* вписать картинку в размер */
+    background-size: cover;
+    /* насыщенность цветов 0% */
+    filter: saturate(0);
 }
+
 
 /* при наведении курсора меняется */
 div:hover {
-    /* сдвигается, гориз. вертик. */
-    /* transform: translate(100px, 100px); */
+    /* насыщенность цветов 100% */
+    filter: saturate(1);
+
+    /* перенасыщенность цветов 200% */
+    /* filter: saturate(2); */
 
     /* меняется, ВЕСЬ текст НЕ сдвигается */
-    /* transform: scale(1.5); */
+        transform: scale(1.5);
 
-/* проворачивается, на несколько градусов */
-    transform: rotate(-15deg);
 }

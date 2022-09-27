@@ -1,84 +1,95 @@
-/* 1 способ transition*/
-/* div {
-height: 100px;
-width: 100px;
-background-color: red; */
-/* замедляет скорость изменения */
-/* transition: 1s; */
-/* можно задавать только к какому-то свойству */
-/* transition: background-color 1s; */
-/* 1 свойство, 2 время замедления, 3 способ замедления
-(медленно в начале и в конце, время срабатывания) */
-/* transition: width 2s ease-in-out 1s; */
-/* можно не сколько  */
-/* transition: width 2s ease-in-out 1s, background-color 1s ease-in-out 1s; */
-/* } */
-
-/* при наведении курсора меняется, но весь текст сдвигается */
-/* div:hover {
-background-color: green;
-height: 200px;
-    width: 200px; */
-/* } */
-
-
-/* 2 способ */
-
-/* div {
+div {
     height: 100px;
     width: 100px;
-    background-color: red;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    /* !замедляет скорость изменения */
     transition: 1s;
-} */
+}
 
-/* при наведении курсора меняется */
-/* div:hover {
-    /* сдвигается, гориз. вертик. */
-/* transform: translate(100px, 100px); */
+/* 1 способ transition*/
+.item1 {
+    background-color: red;
+    /* !можно задавать только к какому-то свойству */
+    transition: background-color 1s;
+    /* 1 свойство, 2 время замедления, 3 способ замедления
+(медленно в начале и в конце, время срабатывания) */
+    transition: width 2s ease-in-out 1s;
+    /* !можно не сколько  */
+    transition: width 2s ease-in-out 1s, background-color 1s ease-in-out 1s;
+}
 
-/* меняется, ВЕСЬ текст НЕ сдвигается */
-/* transform: scale(1.5); */
+.item1:hover {
+    background-color: green;
+    /* !при наведении курсора меняется, но весь текст сдвигается */
+    height: 200px;
+    width: 200px;
+}
 
-/* проворачивается, на несколько градусов */
-/* transform: rotate(-15deg); */
-/* } */
+/* 2 способ */
+.item2 {
+    background-color: green;
+}
+
+.item2:hover {
+    /* !сдвигается, гориз. вертик. */
+    transform: translate(100px, 100px);
+}
 
 /* 3 способ */
-/* div { */
-/* height: 200px; */
-/* width: 300px; */
-/* background-color: red; */
-/* transition: 1s; */
-/* background-image: url(../img/image1.jpg); */
+.item3 {
+    background-color: blue;
+}
+
+.item3:hover {
+    /* !увеличивает, меняет, ВЕСЬ текст НЕ сдвигается */
+    transform: scale(1.5);
+}
+
+/* 4 способ */
+.item4 {
+    background-color: orange;
+}
+
+.item4:hover {
+    /* !проворачивается, на несколько градусов */
+    transform: rotate(-15deg);
+}
+
+/* 5 способ */
+.item5 {
+height: 200px;
+width: 300px;
+background-color: red;
+transition: 1s;
+background-image: url(../img/image1.jpg);
 /* вписать картинку в размер */
-/* background-size: cover; */
+background-size: cover;
 /* насыщенность цветов 0% */
-/* filter: saturate(0); */
-/* } */
-/* при наведении курсора меняется */
-/* div:hover { */
-/* насыщенность цветов 100% */
-/* filter: saturate(1); */
+filter: saturate(0);
+}
 
-/* перенасыщенность цветов 200% */
-/* filter: saturate(2); */
-
-/* меняется, ВЕСЬ текст НЕ сдвигается */
-/* transform: scale(1.5); */
-/* } */
+.item5:hover {
+/* !насыщенность цветов 100% */
+filter: saturate(1);
+/* !перенасыщенность цветов 200% */
+filter: saturate(2);
+/* !меняется, ВЕСЬ текст НЕ сдвигается */
+transform: scale(1.3);
+}
 
 /* 4 способ, при наведении мышки */
 /* p { */
-    /* время анимации */
-    /* animation-duration: 3s; */
-    /* задается любое имя  */
-    /* animation-name: blablabla; */
-    /* сдвигает текст */
-    /* margin-left: 90%; */
-    /* ширина экрана */
-    /* width: 300%; */
-    /* время замедления анимации */
-    /* transition: 3s; */
+/* время анимации */
+/* animation-duration: 3s; */
+/* задается любое имя  */
+/* animation-name: blablabla; */
+/* сдвигает текст */
+/* margin-left: 90%; */
+/* ширина экрана */
+/* width: 300%; */
+/* время замедления анимации */
+/* transition: 3s; */
 /* } */
 
 /* срабатывание ТОЛЬКО при наведении мышки */
@@ -90,40 +101,41 @@ height: 200px;
 /* 4 способ, при загрузке страницы */
 p {
     /* время анимации */
-    animation-duration: 3s;
+    /* animation-duration: 3s; */
     /* задается любое имя  */
     animation-name: blablabla;
     /* делает 3 повторения */
     animation-iteration-count: 3;
-/* добавляет обратную анимацию */
+    /* добавляет обратную анимацию */
     animation-direction: alternate;
 }
 
 @keyframes blablabla {
-/* 0s */
-0% {
-margin-left: 90%;
-    width:300%;
-}
 
-/* в середине делает стоп на экране */
-/* 1.5s */
-30% {
-    font-size: 300%;
-    margin-left: 25%;
-    width: 150%;
-}
+    /* 0s */
+    0% {
+        margin-left: 90%;
+        width: 300%;
+    }
 
-70% {
-    font-size: 300%;
-    margin-left: 25%;
-    width: 150%;
-}
+    /* в середине делает стоп на экране */
+    /* 1.5s */
+    30% {
+        font-size: 300%;
+        margin-left: 25%;
+        width: 150%;
+    }
+
+    70% {
+        font-size: 300%;
+        margin-left: 25%;
+        width: 150%;
+    }
 
 
-/* 3s */
-100% {
-    margin-left: 0%;
-    width: 100%;
-}
+    /* 3s */
+    100% {
+        margin-left: 0%;
+        width: 100%;
+    }
 }
